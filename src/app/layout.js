@@ -1,8 +1,11 @@
 import "./globals.css";
+import 'react-perfect-scrollbar/dist/css/styles.css';
 import Background from "@/components/Background";
 import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
 import Mobile from "@/components/Navigation/Mobile";
+import { Suspense } from "react";
+import Loading from "./Loading";
 
 export const metadata= {
   title:  'Deepak Kumar | Software Engineer',
@@ -22,19 +25,17 @@ export default function RootLayout({ children }) {
             <Header />
             <Mobile />
             <div className="content-area">
+              <Suspense fallback={<Loading/>}>
               <div className="animated-sections">
                 {children}
               </div>
+              </Suspense>
             </div>
           </div>
         </div>
         <script src="js/jquery.min.js"></script>
         {/* <script src="js/modernizr.custom.js"></script> */}
         {/* <script src="js/animating.js"></script> */}
-
-
-        {/* <script src='js/masonry.pkgd.min.js'></script> */}
-        {/* <script src="js/jquery.magnific-popup.min.js"></script> */}
         <script src="js/main.js"></script>
       </body>
     </html>

@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import 'react-perfect-scrollbar/dist/css/styles.css';
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 export default function Blog() {
   return (
@@ -15,7 +15,11 @@ export default function Blog() {
 
         <div className="row">
           <div className="col-xs-12 col-sm-12">
-            <div className="blog-masonry two-columns clearfix">
+            {/* <div className="blog-masonry two-columns clearfix"> */}
+            <ResponsiveMasonry
+                columnsCountBreakPoints={{350: 1, 750: 2}}
+            >
+                <Masonry>
 
               {/* <!-- Blog Post 1 --> */}
               <div className="item post-1">
@@ -38,7 +42,9 @@ export default function Blog() {
                 </div>
               </div>
               {/* <!-- End of Blog Post 1 --> */}
-            </div>
+              </Masonry>
+            </ResponsiveMasonry>
+            {/* </div> */}
           </div>
         </div>
       </div>

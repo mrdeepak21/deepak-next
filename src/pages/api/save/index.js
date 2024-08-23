@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-export default function handler(req, res) {
+export default function save(req, res) {
   if (req.method === 'POST') {
     try {
       let data = Object.values(req.body);

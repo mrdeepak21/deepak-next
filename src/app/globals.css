@@ -28,7 +28,6 @@
 @import url("/css/reset.css");
 @import url("/css/bootstrap-grid.min.css");
 @import url("/css/animations.css");
-@import url("/css/magnific-popup.css");
 
 
 /* ------------------------------------------------------------
@@ -227,10 +226,6 @@ input[type="submit"]:focus {
 /* ============================================================================= 
 3. Page loadig animation
 ============================================================================= */
-.no-js .preloader,
-.no-js .preloader-portfolio { 
-  display: none;
-}
 .preloader,
 .preloader-portfolio {
   position: fixed;
@@ -1118,7 +1113,9 @@ textarea.form-control, textarea.form-control:focus {
 .testimonials.owl-carousel .owl-nav .owl-prev,
 .testimonials.owl-carousel .owl-nav .owl-next,
 .clients.owl-carousel .owl-nav .owl-prev,
-.clients.owl-carousel .owl-nav .owl-next {
+.clients.owl-carousel .owl-nav .owl-next,
+.clients .swiper-button-prev, 
+.clients .swiper-button-next {
   position: relative;
   display: inline-block;
   background-color: #444;
@@ -1139,14 +1136,17 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .testimonials.owl-carousel .owl-nav .owl-prev,
-.clients.owl-carousel .owl-nav .owl-prev {
+.clients.owl-carousel .owl-nav .owl-prev, 
+.clients .swiper-button-prev {
     margin-right: 3px;
 }
 
 .testimonials.owl-carousel .owl-nav .owl-prev:before,
 .testimonials.owl-carousel .owl-nav .owl-next:before,
 .clients.owl-carousel .owl-nav .owl-prev:before,
-.clients.owl-carousel .owl-nav .owl-next:before {
+.clients.owl-carousel .owl-nav .owl-next:before, 
+.clients .swiper-button-prev::before, 
+.clients .swiper-button-next::before {
   position: relative;
   margin: 2px;
   width: 22px;
@@ -1160,19 +1160,23 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .testimonials.owl-carousel .owl-nav .owl-prev:before,
-.clients.owl-carousel .owl-nav .owl-prev:before {
+.clients.owl-carousel .owl-nav .owl-prev:before, 
+.clients .swiper-button-prev::before{
     content: "\f053";
 }
 
 .testimonials.owl-carousel .owl-nav .owl-next:before,
-.clients.owl-carousel .owl-nav .owl-next:before {
+.clients.owl-carousel .owl-nav .owl-next:before, 
+.clients .swiper-button-next::before{
     content: "\f054";
 }
 
 .testimonials.owl-carousel .owl-nav .owl-prev:hover,
 .testimonials.owl-carousel .owl-nav .owl-next:hover,
 .clients.owl-carousel .owl-nav .owl-prev:hover,
-.clients.owl-carousel .owl-nav .owl-next:hover {
+.clients.owl-carousel .owl-nav .owl-next:hover,
+.clients .swiper-button-prev:hover, 
+.clients .swiper-button-next:hover {
     background-color: #f58545;
     border-color: #f58545;
     color: #fff;
